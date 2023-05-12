@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <title>jakaco</title>
+  <link rel="icon" href="favicon.gif" type="image/gif">
+<style>
+  body {
+    background-color: #000;
+    color: #fff;
+  }
+
+  .center-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+
+  .content-box {
+    position: relative;
+    padding: 30px;
+    max-width: 900px;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(2px);
+    border-radius: 10px;
+    text-align: center;
+  }
+
+  .custom-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    margin-top: 10px;
+  }
+
+  .custom-btn img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .custom-col {
+    margin-bottom: 10px;
+  }
+
+  .card {
+    background-color: rgba(0, 0, 0, 0.8);
+    border: none;
+  }
+
+  .audio-player {
+    position: absolute;
+    bottom: 30px;
+    left: 30%;
+    transform: translateX(-50%);
+    width: 100%;
+    text-align: center;
+  }
+
+  .audio-player audio {
+    margin-top: 10px;
+  }
+
+  .card-title {
+    color: #fff;
+  }
+
+  .card-text {
+    color: #aaa;
+  }
+
+  .btn-primary {
+    background-color: #333;
+    border-color: #333;
+    color: #fff;
+  }
+
+  .btn-primary:hover {
+    background-color: #222;
+    border-color: #222;
+    color: #fff;
+  }
+
+  .btn-primary:focus,
+  .btn-primary.focus {
+    background-color: #222;
+    border-color: #222;
+    color: #fff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.5);
+  }
+
+  .popover {
+    background-color: #333;
+  }
+
+  .popover-header {
+    background-color: #222;
+    border-color: #444;
+    color: #fff;
+  }
+
+  .popover-body {
+    background-color: #333;
+    color: #fff;
+  }
+
+  .popover .popover-arrow::before,
+  .popover .popover-arrow::after {
+    border-color: #333 !important;
+    border-top-color: transparent !important;
+    border-bottom-color: transparent !important;
+  }
+</style>
+</head>
+<body>
+  <div class="center-content">
+    <div class="content-box">
+      <h1>Welcome to jakaco.xyz</h1>
+      <div class="container mt-0">
+        <div class="row">
+          <div class="col-md-7">
+            <p>Random links</p>
+            <div class="row mt-3">
+              <div class="col custom-col">
+                <div class="custom-btn">
+                  <img src="nextcloud.webp" alt="Button Image">
+                  <a href="https://nextcloud.jakaco.xyz/" class="btn btn-primary btn-block">Nextcloud</a>
+                </div>
+              </div>
+              <div class="col custom-col">
+                <div class="custom-btn">
+                  <img src="goober.gif" alt="Button Image">
+                  <a href="https://bloba.dev/goober" class="btn btn-primary btn-block">⚠️ goober</a>
+                </div>
+              </div>
+              <div class="col custom-col">
+                <div class="custom-btn">
+                  <img src="150.png" alt="Button Image">
+                  <a href="https://example.com/button3-link" class="btn btn-primary btn-block">idk</a>
+                </div>
+              </div>
+              <div class="w-100"></div>
+              <div class="col custom-col">
+                <div class="custom-btn">
+                  <img src="150.png" alt="Button Image">
+                  <a href="https://example.com/button4-link" class="btn btn-primary btn-block">ill add</a>
+                </div>
+              </div>
+              <div class="col custom-col">
+                <div class="custom-btn">
+                  <img src="150.png" alt="Button Image">
+                  <a href="https://example.com/button5-link" class="btn btn-primary btn-block">something here</a>
+                </div>
+              </div>
+              <div class="col custom-col">
+                <div class="custom-btn">
+                  <img src="150.png" alt="Button Image">
+                  <a href="https://example.com/button6-link" class="btn btn-primary btn-block">someday</a>
+                </div>
+              </div>
+			        <div class="audio-player">
+        <audio controls="controls" __idm_id__="2572289">
+          <source src="gltron.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+        <p class="card-text">GLTron OST</p>
+      </div>
+            </div>
+          </div>
+          <div class="col-md-5">
+            <p>Me</p>
+            <div class="card">
+              <img src="pfp.png" class="card-img-top" alt="Placeholder Image">
+              <div class="card-body">
+                <h5 class="card-title">Profile pic</h5>
+                <p>Social media links:</p>
+                <div class="card-text">
+                  <a href="https://twitter.com/jakaco2" class="btn btn-primary btn-block" target="_blank">Twitter</a>
+                  <button type="button" class="btn btn-primary btn-block" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-content="jakaco#4517" data-bs-original-title="Discord">Discord</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="bootstrap.bundle.min.js"></script>
+  <script>
+	var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+	var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+		return new bootstrap.Popover(popoverTriggerEl)
+	})
+  </script>
+</body></html>
