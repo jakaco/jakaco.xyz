@@ -123,29 +123,6 @@
         border-top-color: transparent !important;
         border-bottom-color: transparent !important;
       }
-
-      /* Mobile-specific CSS */
-      @media (max-width: 767px) {
-        .center-content {
-          height: auto;
-          padding: 20px;
-        }
-        
-        .content-box {
-          max-width: 100%;
-          background-color: rgba(0, 0, 0, 0.6);
-        }
-
-        .col {
-          margin-bottom: 20px;
-        }
-
-        .audio-player {
-          position: static;
-          transform: none;
-          margin-top: 20px;
-        }
-      }
     </style>
   </head>
 
@@ -253,7 +230,7 @@
 		  display: flex;
           flex-direction: column;
           align-items: center;
-          gap: 3px;
+          gap: 5px;
           margin-top: 10px;
 		  }
 
@@ -266,5 +243,17 @@
         document.head.appendChild(mobileStyle);
       }
     </script>
+	<script>
+	    // Adjust the layout for mobile devices
+    function adjustLayoutForMobile() {
+      var colElement = document.querySelector('.col-md-7');
+      if (colElement && isMobileDevice()) {
+        colElement.className = 'col-md-5';
+      }
+    }
+
+    // Call the adjustLayoutForMobile function when the page is loaded
+    window.addEventListener('load', adjustLayoutForMobile);
+	</script>
   </body>
 </html>
