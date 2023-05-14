@@ -244,11 +244,15 @@
       }
     </script>
 	<script>
+	    // Detect if the site is loaded on a mobile device
+    function isMobileDevice() {
+      return /Mobi/i.test(navigator.userAgent);
+    }
 	    // Adjust the layout for mobile devices
     function adjustLayoutForMobile() {
       var colElement = document.querySelector('.col-md-7');
       if (colElement && isMobileDevice()) {
-        colElement.className = 'col-md-5';
+        colElement.className = 'col-md-12';
       }
     }
 
