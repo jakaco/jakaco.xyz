@@ -246,7 +246,7 @@
 	<script>
 	    // Detect if the site is loaded on a mobile device
     function isMobileDevice() {
-      return /Mobi/i.test(navigator.userAgent);
+      return /Mobi|Android/i.test(navigator.userAgent);
     }
 	    // Adjust the layout for mobile devices
     function adjustLayoutForMobile() {
