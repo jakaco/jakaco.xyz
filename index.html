@@ -200,7 +200,7 @@
                     <source src="gltron.mp3" type="audio/mpeg">
                     Your browser does not support the audio element.
                   </audio>
-                  <p class="card-text">GLTron OST</p>
+                  <p class="card-text" id="audio-name">GLTron OST</p>
                 </div>
               </div>
             </div>
@@ -258,6 +258,16 @@
         `;
         document.head.appendChild(mobileStyle);
       }
+    </script>
+    <script>
+      var audios = [["filename.mp3", "The name of the file fancy name"], ["filename.mp3", "The name of the file fancy name"], ["filename.mp3", "The name of the file fancy name"]];
+      var chosenAudio = audios[Math.floor(Math.random() * audios.length)];
+
+      var audio = document.getElementsByTagName("audio")[0];
+      var audioName = document.getElementById("audio-name");
+      audio.src = chosenAudio[0];
+      audio.play();
+      audioName.innerText = chosenAudio[1];
     </script>
   </body>
 </html>
