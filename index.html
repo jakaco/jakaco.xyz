@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="bootstrap.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <title>jakaco</title>
   <link rel="icon" href="favicon.gif" type="image/gif">
   <meta property="og:title" content="jakaco.xyz the website" />
@@ -117,104 +117,112 @@
       color: #fff;
     }
 
-      .popover .popover-arrow::before,
-      .popover .popover-arrow::after {
-        border-color: #333 !important;
-        border-top-color: transparent !important;
-        border-bottom-color: transparent !important;
+    .popover .popover-arrow::before,
+    .popover .popover-arrow::after {
+      border-color: #333 !important;
+      border-top-color: transparent !important;
+      border-bottom-color: transparent !important;
+    }
+
+    /* Mobile-specific CSS */
+    @media (max-width: 767px) {
+      .center-content {
+        height: auto;
+        padding: 20px;
       }
 
-      /* Mobile-specific CSS */
-      @media (max-width: 767px) {
-        .center-content {
-          height: auto;
-          padding: 20px;
-        }
-        
-        .content-box {
-          max-width: 100%;
-          background-color: rgba(0, 0, 0, 0.6);
-        }
-
-        .col {
-          margin-bottom: 20px;
-        }
-
-        .audio-player {
-          position: static;
-          transform: none;
-          margin-top: 20px;
-        }
+      .content-box {
+        max-width: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
       }
-    </style>
-  </head>
 
-  <body>
-    <div class="center-content">
-      <div class="content-box">
-        <h1>Welcome to jakaco.xyz</h1>
-        <div class="container mt-0">
-          <div class="row">
-            <div class="col-md-7">
-              <p>Random links</p>
-              <div class="row mt-3">
-                <div class="col custom-col">
-                  <div class="custom-btn">
-                    <img src="nextcloud.webp" alt="Button Image">
-                    <a href="https://nextcloud.jakaco.xyz/" class="btn btn-primary btn-block">Nextcloud</a>
-                  </div>
-                </div>
-                <div class="col custom-col">
-                  <div class="custom-btn">
-                    <img src="goober.gif" alt="Button Image">
-                    <a href="https://bloba.dev/apps/goober" class="btn btn-primary btn-block">⚠️ goober</a>
-                  </div>
-                </div>
-                <div class="col custom-col">
-                  <div class="custom-btn">
-                    <img src="startmc.png" alt="Button Image">
-                    <a href="https://startmc.jakaco.xyz" class="btn btn-primary btn-block">startmc.sh</a>
-                  </div>
-                </div>
-                <div class="w-100"></div>
-                <div class="col custom-col">
-                  <div class="custom-btn">
-                    <img src="cobalt.png" alt="Button Image">
-                    <a href="https://co.jakaco.xyz" class="btn btn-primary btn-block">cobalt</a>
-                  </div>
-                </div>
-                <div class="col custom-col">
-                  <div class="custom-btn">
-                    <img src="cubert.gif" alt="Button Image">
-                    <a href="https://cubert.jakaco.xyz" class="btn btn-primary btn-block">cubert</a>
-                  </div>
-                </div>
-                <div class="col custom-col">
-                  <div class="custom-btn">
-                    <img src="dl.png" alt="Button Image">
-                    <a href="https://dl.jakaco.xyz" class="btn btn-primary btn-block">Downloads</a>
-                  </div>
-                </div>
-                <div class="audio-player">
-                  <audio controls autoplay>
-                    <source src="funky.mp3" type="audio/mpeg">
-                    Your browser does not support the audio element.
-                  </audio>
-                  <p class="card-text" id="audio-name">GLTron OST</p>
+      .custom-col {
+        flex: 0 0 50%; /* Two columns per row */
+        max-width: 50%;
+      }
+
+      .row {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+    .audio-player {
+      position: static;
+      transform: none;
+      margin-top: 20px;
+      width: 100%; /* Full width */
+      display: flex;
+      flex-direction: column; /* Stack elements vertically */
+      align-items: center; /* Center align items */
+      text-align: center;
+    }
+}
+  </style>
+</head>
+
+<body>
+  <div class="center-content">
+    <div class="content-box">
+      <h1>Welcome to jakaco.xyz</h1>
+      <div class="container mt-0">
+        <div class="row">
+          <div class="col-md-7">
+            <p>Random links</p>
+            <div class="row mt-3">
+              <div class="col-md-4 custom-col">
+                <div class="custom-btn">
+                  <img src="nextcloud.webp" alt="Nextcloud">
+                  <a href="https://nextcloud.jakaco.xyz/" class="btn btn-primary btn-block">Nextcloud</a>
                 </div>
               </div>
+              <div class="col-md-4 custom-col">
+                <div class="custom-btn">
+                  <img src="goober.gif" alt="Goober">
+                  <a href="https://bloba.dev/apps/goober" class="btn btn-primary btn-block">⚠️ Goober</a>
+                </div>
+              </div>
+              <div class="col-md-4 custom-col">
+                <div class="custom-btn">
+                  <img src="startmc.png" alt="startmc.sh">
+                  <a href="https://startmc.jakaco.xyz" class="btn btn-primary btn-block">startmc.sh</a>
+                </div>
+              </div>
+              <div class="col-md-4 custom-col">
+                <div class="custom-btn">
+                  <img src="cobalt.png" alt="Cobalt">
+                  <a href="https://co.jakaco.xyz" class="btn btn-primary btn-block">Cobalt</a>
+                </div>
+              </div>
+              <div class="col-md-4 custom-col">
+                <div class="custom-btn">
+                  <img src="cubert.gif" alt="Cubert">
+                  <a href="https://cubert.jakaco.xyz" class="btn btn-primary btn-block">Cubert</a>
+                </div>
+              </div>
+              <div class="col-md-4 custom-col">
+                <div class="custom-btn">
+                  <img src="dl.png" alt="Downloads">
+                  <a href="https://dl.jakaco.xyz" class="btn btn-primary btn-block">Downloads</a>
+                </div>
+              </div>
+              <div class="audio-player">
+                <audio controls autoplay>
+                  Your browser does not support the audio element.
+                </audio>
+                <p class="card-text" id="audio-name">hiii >w<</p>
+              </div>
             </div>
-            <div class="col-md-5">
-              <p>Me</p>
-              <div class="card">
-                <img src="pfp.png" class="card-img-top" alt="Placeholder Image">
-                <div class="card-body">
-                  <h5 class="card-title">Profile pic</h5>
-                  <p>Social media links:</p>
-                  <div class="card-text">
-                    <a href="https://twitter.com/jakaco4" class="btn btn-primary btn-block" target="_blank">Twitter</a>
-                    <button type="button" class="btn btn-primary btn-block" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-content="jakaco" data-bs-original-title="Discord">Discord</button>
-                  </div>
+          </div>
+          <div class="col-md-5">
+            <p>Me</p>
+            <div class="card">
+              <img src="pfp.png" class="card-img-top" alt="Placeholder Image">
+              <div class="card-body">
+                <h5 class="card-title">Profile pic</h5>
+                <p style="color: white;">Social media links:</p>
+                <div class="card-text">
+                  <a href="https://twitter.com/jakaco4" class="btn btn-primary btn-block" target="_blank" style="color: white;">Twitter</a>
+                  <button type="button" class="btn btn-primary btn-block" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-content="jakaco" data-bs-original-title="Discord" style="color: white;">Discord</button>
                 </div>
               </div>
             </div>
@@ -222,43 +230,50 @@
         </div>
       </div>
     </div>
+  </div>
 
-    <script src="bootstrap.bundle.min.js"></script>
-    <script>
-      var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
-      var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
-        return new bootstrap.Popover(popoverTriggerEl)
-      });
-    </script>
-    <script>
-      // Detect if the site is loaded on a mobile device
-      if (/Mobi|Android/i.test(navigator.userAgent)) {
-        var mobileStyle = document.createElement('style');
-        mobileStyle.innerHTML = `
-          /* Mobile-specific CSS */
-          .center-content {
-            height: auto;
-            padding: 20px;
-          }
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script>
+    var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+    var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+      return new bootstrap.Popover(popoverTriggerEl)
+    });
+  </script>
+  <script>
+    // Detect if the site is loaded on a mobile device
+    if (/Mobi|Android/i.test(navigator.userAgent)) {
+      var mobileStyle = document.createElement('style');
+      mobileStyle.innerHTML = `
+        /* Mobile-specific CSS */
+        .center-content {
+          height: auto;
+          padding: 20px;
+        }
 
-          .content-box {
-            max-width: 100%;
-            background-color: rgba(0, 0, 0, 0.6);
-          }
+        .content-box {
+          max-width: 100%;
+          background-color: rgba(0, 0, 0, 0.6);
+        }
 
-          .col {
-            margin-bottom: 20px;
-          }
+        .custom-col {
+          flex: 0 0 50%;
+          max-width: 50%;
+        }
 
-          .audio-player {
-            position: static;
-            transform: none;
-            margin-top: 20px;
-          }
-        `;
-        document.head.appendChild(mobileStyle);
-      }
-    </script>
+        .row {
+          display: flex;
+          flex-wrap: wrap;
+        }
+
+        .audio-player {
+          position: static;
+          transform: none;
+          margin-top: 20px;
+        }
+      `;
+      document.head.appendChild(mobileStyle);
+    }
+  </script>
     <script>
       var audios = [["final_wish.mp3", "ooxygen - Final wish"], ["its_not_fair.mp3", "nacho - it's not fair"], ["lexapro_delirium.mp3", "Sewerslvt - Lexapro Delirium"], ["menhera_complex.mp3", "Yumeko - menhera complex"], ["what_we_did_in_the_desert.mp3", "eightiesheadachetape - what we did in the desert"], ["destroy_the_wired.mp3", "TOKYOPILL - DESTROY The Wired"]];
       var chosenAudio = audios[Math.floor(Math.random() * audios.length)];
@@ -269,5 +284,6 @@
       audio.play();
       audioName.innerText = chosenAudio[1];
     </script>
-  </body>
+</body>
+
 </html>
